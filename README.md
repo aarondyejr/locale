@@ -2,7 +2,7 @@
 > Locale is a basic localization package that takes the location of your locales and loads them into a map for easy looking up.
 
 # Examples
-> Let us say you have a localization for english, it would look something like this:
+> Let us say you have a localization for English, it would look something like this:
 ```json
 {
   "WELCOME:MAIN_MESSAGE": "Welcome to x Server",
@@ -14,17 +14,23 @@
 import { Localization } from 'locale';
 
 (async () => {
-	// lng is what will be used as a default, so if you wanna always look up
-  // so if you want to always look up english translations it will use lng instead
-	const locale = new Localization({ lng: 'en' })
 
-	// this will allow you to add all the locales into a map as maps of O(n) lookup
-  await locale.addMultipleIn("locales")
+	/**
+	* When using Locale, you wanna make sure you make an instance of the Localization class.
+	* The class takes in only a single paramater which are the options. 
+	* 
+	* As of right now there is only one option with is lng. lng is what you set as the default
+	* language, the package will use lng if you don't supply anything else in the 't' translate
+	* method as shown below.
+	* 
+	* Locale uses the standard formatting of i18n localizations of "KEY:NAME": "VALUE" so you
+	* have to look up those translations following the same pattern.
+	*/
+	const locale = new Localization({ lng: 'en' })
+    await locale.addMultipleIn("locales")
   
-  console.log(locale.t('WELCOME:MAIN_MESSAGE')) // Welcome to x Server
-  // Now lets say you had another localization for spanish, 
-  // you could specify you wanna look there
-  console.log(locale.t('WELCOME:MAIN_MESSAGE', 'es')) // Bienvenido al servidor x
+    console.log(locale.t('WELCOME:MAIN_MESSAGE')) // Welcome to x Server
+    console.log(locale.t('WELCOME:MAIN_MESSAGE', 'es')) // Bienvenido al servidor x
 })()
 ```
 # Contributing
