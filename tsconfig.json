@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "declaration": true,
+    "baseUrl": "./",
+    "outDir": "out",
+    "rootDir": "src",
+    "strict": true,
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules", "./out/**/*"]
+}
