@@ -27,10 +27,10 @@ import { Localization } from 'locale';
 	* have to look up those translations following the same pattern.
 	*/
 	const locale = new Localization({ lng: 'en' })
-    await locale.addMultipleIn("locales")
+    	await locale.addMultipleIn("locales")
   
-    console.log(locale.t('WELCOME:MAIN_MESSAGE')) // Welcome to x Server
-    console.log(locale.t('WELCOME:MAIN_MESSAGE', 'es')) // Bienvenido al servidor x
+    	console.log(locale.t('WELCOME:MAIN_MESSAGE')) // Welcome to x Server
+    	console.log(locale.t('WELCOME:MAIN_MESSAGE', 'es')) // Bienvenido al servidor x
 })()
 ```
 # Contributing
