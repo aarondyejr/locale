@@ -21,7 +21,7 @@ import { Localization } from 'locale';
 	// this will allow you to add all the locales into a map as maps of O(n) lookup
   await locale.addMultipleIn("locales")
   
-  console.log(locale.t('WELCOME_MAIN_MESSAGE')) // Welcome to x Server
+  console.log(locale.t('WELCOME:MAIN_MESSAGE')) // Welcome to x Server
   // Now lets say you had another localization for spanish, 
   // you could specify you wanna look there
   console.log(locale.t('WELCOME:MAIN_MESSAGE', 'es')) // Bienvenido al servidor x
